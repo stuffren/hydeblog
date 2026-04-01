@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>codeliang - 使用内置PHP服务器方式开发项目时，在哪里创建项目目录</title>
+
+
+
+<meta name="description" content="本文介绍了在使用PHP内置服务器时，在哪里创建项目目录的方法">
+<meta name="twitter:title" content="codeliang - 使用内置PHP服务器方式开发项目时，在哪里创建项目目录">
+<meta name="author" content="Stuffren">
+<meta name="keywords" content="技术教程">
+<meta property="og:description" content="本文介绍了在使用PHP内置服务器时，在哪里创建项目目录的方法">
+<meta property="og:title" content="codeliang - 使用内置PHP服务器方式开发项目时，在哪里创建项目目录">
+<meta property="og:article:published_time" content="2026-03-28T15:22:00+00:00">
+<meta property="og:image" content="../media/001.jpeg?v=c0a5a840">
+<meta property="og:type" content="article">
+
+
+<meta name="generator" content="HydePHP v2.0.1">
+<meta property="og:site_name" content="codeliang">
+
+
+
+
+<style>[x-cloak] {display: none!important}</style>
+
+
+            <link rel="stylesheet" href="../media/app.css?v=7eb94862">
+    
+
+    
+    
+
+
+    
+    <meta id="meta-color-scheme" name="color-scheme" content="light">
+    <script>if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) { document.documentElement.classList.add('dark'); document.getElementById('meta-color-scheme').setAttribute('content', 'dark');} else { document.documentElement.classList.remove('dark') } </script>
+
+
+
+
+
+
+</head>
+<body id="app" class="flex flex-col min-h-screen overflow-x-hidden dark:bg-gray-900 dark:text-white" x-data="{ navigationOpen: false }" x-on:keydown.escape="navigationOpen = false;">
+    <a href="#content" id="skip-to-content" class="sr-only focus:not-sr-only bg-black border-4 border-yellow-400 focus:absolute focus:mt-2 focus:mx-auto focus:p-2 focus:w-64 h-auto left-0 overflow-auto right-0 rounded-md text-center text-lg text-white top-auto z-50 ">Skip to content</a>    <nav aria-label="Main navigation" id="main-navigation" class="flex flex-wrap items-center justify-between p-4 shadow-lg sm:shadow-xl md:shadow-none dark:bg-gray-800">
+    <div id="main-navigation-brand" class="flex grow items-center shrink-0 text-gray-700 dark:text-gray-200">
+        <a href="../index.html" class="font-bold px-4" aria-label="Home page">
+    codeliang
+</a>
+        <div class="ml-auto">
+            <button @click="toggleTheme" class="theme-toggle-button flex items-center px-2 py-1 hover:text-gray-700 dark:text-gray-200" title="Toggle theme">
+        <span class="sr-only">Toggle dark theme</span>
+        <svg width="1.25rem" height="1.25rem" class="w-5 h-5 hidden dark:block" fill="#FFFFFF" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+        <svg width="1.25rem" height="1.25rem" class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+    </button>
+        </div>
+    </div>
+
+    <div class="block md:hidden">
+        <button id="navigation-toggle-button" class="flex items-center px-3 py-1 hover:text-gray-700 dark:text-gray-200"
+                aria-label="Toggle navigation menu" @click="navigationOpen = ! navigationOpen">
+            <svg x-show="! navigationOpen" title="Open Navigation Menu" class="dark:fill-gray-200"
+                 style="display: block;"
+                 id="open-main-navigation-menu-icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24"
+                 width="24">
+                <title>Open Menu</title>
+                <path d="M0 0h24v24H0z" fill="none"/>
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+            <svg x-show="navigationOpen" title="Close Navigation Menu" class="dark:fill-gray-200" style="display: none;"
+                 id="close-main-navigation-menu-icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24"
+                 width="24">
+                <title>Close Menu</title>
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            </svg>
+        </button>
+    </div>
+
+    <div id="main-navigation-links" 
+         class="w-full hidden md:flex grow md:grow-0 md:items-center md:w-auto px-6 -mx-4 border-t mt-3 pt-3 md:border-none md:mt-0 md:py-0 border-gray-200 dark:border-gray-700"
+         :class="navigationOpen ? 'block!' : ''">
+        <ul aria-label="Navigation links" class="md:grow md:flex justify-end">
+                            <li class="md:mx-2">
+                                            <a href="../index.html" class="navigation-link block my-2 md:my-0 md:inline-block py-1 text-gray-700 hover:text-gray-900 dark:text-gray-100">home</a>                                    </li>
+                            <li class="md:mx-2">
+                                            <a href="../blog.html" class="navigation-link block my-2 md:my-0 md:inline-block py-1 text-gray-700 hover:text-gray-900 dark:text-gray-100">blog</a>                                    </li>
+                            <li class="md:mx-2">
+                                            <a href="../categories.html" class="navigation-link block my-2 md:my-0 md:inline-block py-1 text-gray-700 hover:text-gray-900 dark:text-gray-100">Categories</a>                                    </li>
+                            <li class="md:mx-2">
+                                            <a href="../tags.html" class="navigation-link block my-2 md:my-0 md:inline-block py-1 text-gray-700 hover:text-gray-900 dark:text-gray-100">Tags</a>                                    </li>
+                            <li class="md:mx-2">
+                                            <a href="../archive.html" class="navigation-link block my-2 md:my-0 md:inline-block py-1 text-gray-700 hover:text-gray-900 dark:text-gray-100">Archive</a>                                    </li>
+                            <li class="md:mx-2">
+                                            <div class="dropdown-container relative" x-data="{ open: false }">
+    <button class="dropdown-button block my-2 md:my-0 md:inline-block py-1 text-gray-700 hover:text-gray-900 dark:text-gray-100"
+            x-on:click="open = ! open" @click.outside="open = false" @keydown.escape.window="open = false">
+        Projects
+        <svg class="inline transition-all dark:fill-white" x-bind:style="open ? { transform: 'rotate(180deg)' } : ''" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg>
+    </button>
+    <div class="dropdown absolute shadow-lg bg-white dark:bg-gray-700 z-50 right-0" :class="open ? '' : 'hidden'" x-cloak="">
+        <ul class="dropdown-items px-3 py-2">
+                                                <li class="whitespace-nowrap">
+                        <a href="../projects/index.html" class="navigation-link block my-2 md:my-0 md:inline-block py-1 text-gray-700 hover:text-gray-900 dark:text-gray-100">项目作品</a>                    </li>
+                                    <li class="whitespace-nowrap">
+                        <a href="../projects/project-a.html" class="navigation-link block my-2 md:my-0 md:inline-block py-1 text-gray-700 hover:text-gray-900 dark:text-gray-100">博客系统</a>                    </li>
+                                    <li class="whitespace-nowrap">
+                        <a href="../projects/project-b.html" class="navigation-link block my-2 md:my-0 md:inline-block py-1 text-gray-700 hover:text-gray-900 dark:text-gray-100">任务工具</a>                    </li>
+                                    </ul>
+    </div>
+</div>                                    </li>
+                            <li class="md:mx-2">
+                                            <a href="../about.html" class="navigation-link block my-2 md:my-0 md:inline-block py-1 text-gray-700 hover:text-gray-900 dark:text-gray-100">about</a>                                    </li>
+                            <li class="md:mx-2">
+                                            <a href="../docs/index.html" class="navigation-link block my-2 md:my-0 md:inline-block py-1 text-gray-700 hover:text-gray-900 dark:text-gray-100">tutorial</a>                                    </li>
+                            <li class="md:mx-2">
+                                            <a href="https://github.com/stuffren" class="navigation-link block my-2 md:my-0 md:inline-block py-1 text-gray-700 hover:text-gray-900 dark:text-gray-100">GitHub</a>                                    </li>
+                    </ul>
+    </div>
+</nav>
+    <section>
+        
+    <main id="content" class="mx-auto max-w-7xl py-16 px-8">
+        <article aria-label="Article" id="使用内置PHP服务器方式开发项目时，在哪里创建项目目录" itemscope itemtype="https://schema.org/BlogPosting"
+    class="post-article mx-auto prose dark:prose-invert">
+    <meta itemprop="identifier" content="使用内置PHP服务器方式开发项目时，在哪里创建项目目录">
+    
+    <header aria-label="Header section" role="doc-pageheader">
+        <h1 itemprop="headline" class="mb-4">使用内置PHP服务器方式开发项目时，在哪里创建项目目录</h1>
+        <div id="byline" aria-label="About the post" role="doc-introduction">
+            Posted <time itemprop="dateCreated datePublished" datetime="2026-03-28T15:22:00+00:00" title="Saturday Mar 28th, 2026, at 3:22pm">Mar 28th, 2026</time>            by author
+<address itemprop="author" itemscope itemtype="https://schema.org/Person" aria-label="The post author" style="display: inline;">
+                <span itemprop="name" aria-label="The author's name" title=@stuffren>Stuffren</span>
+            </address>            in the category "技术教程"        </div>
+    </header>
+    <figure aria-label="Cover image" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" role="doc-cover">
+    <img src="../media/001.jpeg?v=c0a5a840" alt="" title="" itemprop="image" class="mb-0">
+    <figcaption aria-label="Image caption" itemprop="caption">
+                    
+            
+                        </figcaption>
+
+            <meta itemprop="url" content="../media/001.jpeg?v=c0a5a840">
+            <meta itemprop="contentUrl" content="../media/001.jpeg?v=c0a5a840">
+    </figure>    <div aria-label="Article body" itemprop="articleBody">
+        <p><strong>刚才我通过手动方式成功将php8.4.19 NTS版本安装到了E:\php
+问题：当我选择通过“启动PHP内置服务器的方式”来开发本地项目时，请举例说明，我应该选择在哪里建立项目目录呢？</strong></p>
+<blockquote>
+<p>kimi</p>
+</blockquote>
+<h2>项目目录选择原则</h2>
+<p>PHP 内置服务器会把你指定的目录作为<strong>网站根目录（Document Root）</strong>，所以：</p>
+<p><strong>项目目录 ≠ PHP 安装目录</strong></p>
+<p>推荐在独立位置创建项目文件夹，保持结构清晰。</p>
+<hr />
+<h2>推荐目录结构示例</h2>
+<h3>方案一：集中式（推荐初学者）</h3>
+<pre><code>E:\
+├── php\                    ← PHP 程序本身（已安装）
+│   ├── php.exe
+│   └── ...
+│
+└── www\                    ← 所有网站项目放这里
+    ├── project1\           ← 项目1
+    │   ├── index.php
+    │   └── ...
+    │
+    ├── project2\           ← 项目2
+    │   ├── index.php
+    │   └── ...
+    │
+    └── test-app\           ← 你的新应用
+        ├── index.php
+        ├── api\
+        └── assets\
+</code></pre>
+<p><strong>启动命令</strong>：</p>
+<pre><code class="language-powershell"># 进入项目目录
+cd E:\www\test-app
+
+# 启动服务器（当前目录作为根目录）
+php -S localhost:8000
+
+# 或者明确指定根目录
+php -S localhost:8000 -t E:\www\test-app
+</code></pre>
+<hr />
+<h3>方案二：分散式（按项目类型）</h3>
+<pre><code>E:\
+├── php\                    ← PHP 程序
+├── projects\               ← 工作项目
+│   ├── company-website\
+│   └── internal-tool\
+├── experiments\            ← 实验/学习
+│   └── php-learning\
+└── temp\                   ← 临时测试
+    └── quick-test\
+</code></pre>
+<hr />
+<h2>实战：创建第一个项目</h2>
+<pre><code class="language-powershell"># 1. 创建项目目录
+mkdir E:\www\my-first-app -Force
+cd E:\www\my-first-app
+
+# 2. 创建入口文件
+@'
+&lt;?php
+phpinfo();
+'@ | Out-File -FilePath &quot;index.php&quot; -Encoding utf8
+
+# 3. 启动服务器
+php -S localhost:8000
+</code></pre>
+<p>然后浏览器访问：<code>http://localhost:8000</code></p>
+<hr />
+<p><img src="../media/001.jpeg" alt="ollama alt" title="ollama Title" /></p>
+<h2>关键要点总结</h2>
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>答案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PHP 安装在哪</td>
+<td><code>E:\php</code>（程序文件，不碰它）</td>
+</tr>
+<tr>
+<td>项目放哪里</td>
+<td><strong>另外创建</strong>，如 <code>E:\www\项目名</code></td>
+</tr>
+<tr>
+<td>如何启动</td>
+<td>在项目目录运行 <code>php -S localhost:8000</code></td>
+</tr>
+<tr>
+<td>能否同时运行多个项目</td>
+<td>可以，用不同端口：<code>php -S localhost:8001</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>核心原则</strong>：PHP 程序 和 你的代码 分开存放，互不干扰。</p>
+
+    </div>
+    <span class="sr-only">End of article</span>
+</article>    </main>
+
+    </section>
+
+    <footer aria-label="Page footer" class="flex py-4 px-6 w-full text-center mt-auto bg-slate-100 dark:bg-gray-800">
+        <div class="prose dark:prose-invert text-center mx-auto">
+            <p>codeliang proudly built with <a href="https://github.com/stuffren">HydePHP</a> 🎩</p>
+        </div>
+        <a href="#app" aria-label="Go to top of page" class="float-right">
+            <button title="Scroll to top">
+                <svg width="1.5rem" height="1.5rem" role="presentation" class="fill-current text-gray-500 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+                </svg>
+            </button>
+        </a>
+    </footer>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.3/dist/cdn.min.js" integrity="sha256-gOkV4d9/FmMNEkjOzVlyM2eNAWSUXisT+1RbMTTIgXI=" crossorigin="anonymous"></script>
+
+<script>
+    function toggleTheme() {
+        if (localStorage.getItem('color-theme') === 'dark' || !('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.remove("dark");
+            localStorage.setItem('color-theme', 'light');
+            document.getElementById('meta-color-scheme').setAttribute('content', 'light');
+        } else {
+            document.documentElement.classList.add("dark");
+            localStorage.setItem('color-theme', 'dark');
+            document.getElementById('meta-color-scheme').setAttribute('content', 'dark');
+        }
+    }
+</script>
+
+
+
+
+
+
+</body>
+</html>
