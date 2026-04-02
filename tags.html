@@ -1,3 +1,15 @@
+---
+title: Tags
+description: Browse all blog post tags
+navigation:
+    label: Tags
+    priority: 3
+---
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -128,65 +140,70 @@
 
     
     <div class="mb-8">
-        <div class="flex flex-wrap gap-3 justify-center mb-6">
-            <a href="tags"
-               class="inline-flex items-center px-4 py-2 rounded-full border-2
+        <div class="flex flex-wrap gap-3 justify-center mb-6" id="tag-buttons">
+            <a href="javascript:void(0);"
+               class="tag-btn tag-btn-all inline-flex items-center px-4 py-2 rounded-full border-2
                       border-blue-600 bg-blue-600 text-white
-                      transition-colors duration-200 text-base font-medium">
+                      transition-colors duration-200 text-base font-medium"
+               data-tag="">
                 <span>All</span>
-                <span class="ml-2 px-2 py-0.5 text-xs rounded-full
-                             bg-blue-500 text-white">
+                <span class="ml-2 px-2 py-0.5 text-xs rounded-full bg-blue-500 text-white">
                     5
                 </span>
             </a>
 
-                            <a href="tags?tag=laravel"
-                   class="inline-flex items-center px-4 py-2 rounded-full border-2
-                          border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700
-                          transition-colors duration-200 text-base font-medium">
+                            <a href="javascript:void(0);"
+                   class="tag-btn inline-flex items-center px-4 py-2 rounded-full border-2
+                          border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300
+                          hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700
+                          transition-colors duration-200 text-base font-medium"
+                   data-tag="laravel">
                     <span>laravel</span>
-                    <span class="ml-2 px-2 py-0.5 text-xs rounded-full
-                                 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400">
+                    <span class="ml-2 px-2 py-0.5 text-xs rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400">
                         1
                     </span>
                 </a>
-                            <a href="tags?tag=nts"
-                   class="inline-flex items-center px-4 py-2 rounded-full border-2
-                          border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700
-                          transition-colors duration-200 text-base font-medium">
+                            <a href="javascript:void(0);"
+                   class="tag-btn inline-flex items-center px-4 py-2 rounded-full border-2
+                          border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300
+                          hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700
+                          transition-colors duration-200 text-base font-medium"
+                   data-tag="nts">
                     <span>nts版本</span>
-                    <span class="ml-2 px-2 py-0.5 text-xs rounded-full
-                                 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400">
+                    <span class="ml-2 px-2 py-0.5 text-xs rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400">
                         1
                     </span>
                 </a>
-                            <a href="tags?tag=php"
-                   class="inline-flex items-center px-4 py-2 rounded-full border-2
-                          border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700
-                          transition-colors duration-200 text-base font-medium">
+                            <a href="javascript:void(0);"
+                   class="tag-btn inline-flex items-center px-4 py-2 rounded-full border-2
+                          border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300
+                          hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700
+                          transition-colors duration-200 text-base font-medium"
+                   data-tag="php">
                     <span>php</span>
-                    <span class="ml-2 px-2 py-0.5 text-xs rounded-full
-                                 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400">
+                    <span class="ml-2 px-2 py-0.5 text-xs rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400">
                         2
                     </span>
                 </a>
-                            <a href="tags?tag=tutorial"
-                   class="inline-flex items-center px-4 py-2 rounded-full border-2
-                          border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700
-                          transition-colors duration-200 text-base font-medium">
+                            <a href="javascript:void(0);"
+                   class="tag-btn inline-flex items-center px-4 py-2 rounded-full border-2
+                          border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300
+                          hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700
+                          transition-colors duration-200 text-base font-medium"
+                   data-tag="tutorial">
                     <span>tutorial</span>
-                    <span class="ml-2 px-2 py-0.5 text-xs rounded-full
-                                 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400">
+                    <span class="ml-2 px-2 py-0.5 text-xs rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400">
                         1
                     </span>
                 </a>
-                            <a href="tags?tag=t_5YaF572u5pyN5Yqh5Zmo"
-                   class="inline-flex items-center px-4 py-2 rounded-full border-2
-                          border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700
-                          transition-colors duration-200 text-base font-medium">
+                            <a href="javascript:void(0);"
+                   class="tag-btn inline-flex items-center px-4 py-2 rounded-full border-2
+                          border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300
+                          hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700
+                          transition-colors duration-200 text-base font-medium"
+                   data-tag="t_5YaF572u5pyN5Yqh5Zmo">
                     <span>内置服务器</span>
-                    <span class="ml-2 px-2 py-0.5 text-xs rounded-full
-                                 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400">
+                    <span class="ml-2 px-2 py-0.5 text-xs rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400">
                         1
                     </span>
                 </a>
@@ -194,161 +211,250 @@
     </div>
 
     
-            
-        <div class="space-y-12">
-                            <section class="tag-section">
-                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
-                        </svg>
-                        laravel
-                        <span class="ml-2 text-sm font-normal text-gray-500">(1 post)</span>
-                    </h2>
+    <div id="posts-container">
+                    <section class="tag-section" data-tag="laravel">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                    </svg>
+                    laravel
+                    <span class="ml-2 text-sm font-normal text-gray-500">(1 post)</span>
+                </h2>
 
-                    <div class="space-y-4">
-                                                    
-                            <a href="posts/my-first-post.html"
-                               class="block bg-white dark:bg-gray-800 rounded-lg shadow p-4 hover:shadow-md transition-shadow">
-                                <h3 class="text-lg font-medium text-gray-900 dark:text-white">
-                                    My First Post
-                                </h3>
-                                                                    <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                        A short description used in previews and SEO
-                                    </p>
-                                                                <div class="text-xs text-gray-500 dark:text-gray-500 mt-2">
-                                                                            <time datetime="2026-03-28 06:15">Mar 28th, 2026</time>
-                                                                                                                <span class="mx-1">•</span>
-                                        <span>default</span>
-                                                                    </div>
-                            </a>
-                                            </div>
-                </section>
-                            <section class="tag-section">
-                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
-                        </svg>
-                        nts版本
-                        <span class="ml-2 text-sm font-normal text-gray-500">(1 post)</span>
-                    </h2>
+                <div class="space-y-4">
+                                            
+                        <a href="posts/my-first-post.html"
+                           class="post-item block bg-white dark:bg-gray-800 rounded-lg shadow p-4 hover:shadow-md transition-shadow"
+                           data-tags="[&quot;php&quot;,&quot;laravel&quot;,&quot;tutorial&quot;]">
+                            <h3 class="text-lg font-medium text-gray-900 dark:text-white">
+                                My First Post
+                            </h3>
+                                                            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
+                                    A short description used in previews and SEO
+                                </p>
+                                                        <div class="text-xs text-gray-500 dark:text-gray-500 mt-2">
+                                                                    <time datetime="2026-03-28 06:15">Mar 28th, 2026</time>
+                                                                                                    <span class="mx-1">•</span>
+                                    <span>default</span>
+                                                            </div>
+                        </a>
+                                    </div>
+            </section>
+                    <section class="tag-section" data-tag="nts">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                    </svg>
+                    nts版本
+                    <span class="ml-2 text-sm font-normal text-gray-500">(1 post)</span>
+                </h2>
 
-                    <div class="space-y-4">
-                                                    
-                            <a href="posts/使用内置PHP服务器方式开发项目时，在哪里创建项目目录.html"
-                               class="block bg-white dark:bg-gray-800 rounded-lg shadow p-4 hover:shadow-md transition-shadow">
-                                <h3 class="text-lg font-medium text-gray-900 dark:text-white">
-                                    使用内置PHP服务器方式开发项目时，在哪里创建项目目录
-                                </h3>
-                                                                    <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                        本文介绍了在使用PHP内置服务器时，在哪里创建项目目录的方法
-                                    </p>
-                                                                <div class="text-xs text-gray-500 dark:text-gray-500 mt-2">
-                                                                            <time datetime="2026-03-28 15:22">Mar 28th, 2026</time>
-                                                                                                                <span class="mx-1">•</span>
-                                        <span>stuffren</span>
-                                                                    </div>
-                            </a>
-                                            </div>
-                </section>
-                            <section class="tag-section">
-                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
-                        </svg>
-                        php
-                        <span class="ml-2 text-sm font-normal text-gray-500">(2 posts)</span>
-                    </h2>
+                <div class="space-y-4">
+                                            
+                        <a href="posts/使用内置PHP服务器方式开发项目时，在哪里创建项目目录.html"
+                           class="post-item block bg-white dark:bg-gray-800 rounded-lg shadow p-4 hover:shadow-md transition-shadow"
+                           data-tags="[&quot;php&quot;,&quot;t_5YaF572u5pyN5Yqh5Zmo&quot;,&quot;nts&quot;]">
+                            <h3 class="text-lg font-medium text-gray-900 dark:text-white">
+                                使用内置PHP服务器方式开发项目时，在哪里创建项目目录
+                            </h3>
+                                                            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
+                                    本文介绍了在使用PHP内置服务器时，在哪里创建项目目录的方法
+                                </p>
+                                                        <div class="text-xs text-gray-500 dark:text-gray-500 mt-2">
+                                                                    <time datetime="2026-03-28 15:22">Mar 28th, 2026</time>
+                                                                                                    <span class="mx-1">•</span>
+                                    <span>stuffren</span>
+                                                            </div>
+                        </a>
+                                    </div>
+            </section>
+                    <section class="tag-section" data-tag="php">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                    </svg>
+                    php
+                    <span class="ml-2 text-sm font-normal text-gray-500">(2 posts)</span>
+                </h2>
 
-                    <div class="space-y-4">
-                                                    
-                            <a href="posts/使用内置PHP服务器方式开发项目时，在哪里创建项目目录.html"
-                               class="block bg-white dark:bg-gray-800 rounded-lg shadow p-4 hover:shadow-md transition-shadow">
-                                <h3 class="text-lg font-medium text-gray-900 dark:text-white">
-                                    使用内置PHP服务器方式开发项目时，在哪里创建项目目录
-                                </h3>
-                                                                    <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                        本文介绍了在使用PHP内置服务器时，在哪里创建项目目录的方法
-                                    </p>
-                                                                <div class="text-xs text-gray-500 dark:text-gray-500 mt-2">
-                                                                            <time datetime="2026-03-28 15:22">Mar 28th, 2026</time>
-                                                                                                                <span class="mx-1">•</span>
-                                        <span>stuffren</span>
-                                                                    </div>
-                            </a>
-                                                    
-                            <a href="posts/my-first-post.html"
-                               class="block bg-white dark:bg-gray-800 rounded-lg shadow p-4 hover:shadow-md transition-shadow">
-                                <h3 class="text-lg font-medium text-gray-900 dark:text-white">
-                                    My First Post
-                                </h3>
-                                                                    <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                        A short description used in previews and SEO
-                                    </p>
-                                                                <div class="text-xs text-gray-500 dark:text-gray-500 mt-2">
-                                                                            <time datetime="2026-03-28 06:15">Mar 28th, 2026</time>
-                                                                                                                <span class="mx-1">•</span>
-                                        <span>default</span>
-                                                                    </div>
-                            </a>
-                                            </div>
-                </section>
-                            <section class="tag-section">
-                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
-                        </svg>
-                        tutorial
-                        <span class="ml-2 text-sm font-normal text-gray-500">(1 post)</span>
-                    </h2>
+                <div class="space-y-4">
+                                            
+                        <a href="posts/使用内置PHP服务器方式开发项目时，在哪里创建项目目录.html"
+                           class="post-item block bg-white dark:bg-gray-800 rounded-lg shadow p-4 hover:shadow-md transition-shadow"
+                           data-tags="[&quot;php&quot;,&quot;t_5YaF572u5pyN5Yqh5Zmo&quot;,&quot;nts&quot;]">
+                            <h3 class="text-lg font-medium text-gray-900 dark:text-white">
+                                使用内置PHP服务器方式开发项目时，在哪里创建项目目录
+                            </h3>
+                                                            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
+                                    本文介绍了在使用PHP内置服务器时，在哪里创建项目目录的方法
+                                </p>
+                                                        <div class="text-xs text-gray-500 dark:text-gray-500 mt-2">
+                                                                    <time datetime="2026-03-28 15:22">Mar 28th, 2026</time>
+                                                                                                    <span class="mx-1">•</span>
+                                    <span>stuffren</span>
+                                                            </div>
+                        </a>
+                                            
+                        <a href="posts/my-first-post.html"
+                           class="post-item block bg-white dark:bg-gray-800 rounded-lg shadow p-4 hover:shadow-md transition-shadow"
+                           data-tags="[&quot;php&quot;,&quot;laravel&quot;,&quot;tutorial&quot;]">
+                            <h3 class="text-lg font-medium text-gray-900 dark:text-white">
+                                My First Post
+                            </h3>
+                                                            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
+                                    A short description used in previews and SEO
+                                </p>
+                                                        <div class="text-xs text-gray-500 dark:text-gray-500 mt-2">
+                                                                    <time datetime="2026-03-28 06:15">Mar 28th, 2026</time>
+                                                                                                    <span class="mx-1">•</span>
+                                    <span>default</span>
+                                                            </div>
+                        </a>
+                                    </div>
+            </section>
+                    <section class="tag-section" data-tag="tutorial">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                    </svg>
+                    tutorial
+                    <span class="ml-2 text-sm font-normal text-gray-500">(1 post)</span>
+                </h2>
 
-                    <div class="space-y-4">
-                                                    
-                            <a href="posts/my-first-post.html"
-                               class="block bg-white dark:bg-gray-800 rounded-lg shadow p-4 hover:shadow-md transition-shadow">
-                                <h3 class="text-lg font-medium text-gray-900 dark:text-white">
-                                    My First Post
-                                </h3>
-                                                                    <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                        A short description used in previews and SEO
-                                    </p>
-                                                                <div class="text-xs text-gray-500 dark:text-gray-500 mt-2">
-                                                                            <time datetime="2026-03-28 06:15">Mar 28th, 2026</time>
-                                                                                                                <span class="mx-1">•</span>
-                                        <span>default</span>
-                                                                    </div>
-                            </a>
-                                            </div>
-                </section>
-                            <section class="tag-section">
-                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
-                        </svg>
-                        内置服务器
-                        <span class="ml-2 text-sm font-normal text-gray-500">(1 post)</span>
-                    </h2>
+                <div class="space-y-4">
+                                            
+                        <a href="posts/my-first-post.html"
+                           class="post-item block bg-white dark:bg-gray-800 rounded-lg shadow p-4 hover:shadow-md transition-shadow"
+                           data-tags="[&quot;php&quot;,&quot;laravel&quot;,&quot;tutorial&quot;]">
+                            <h3 class="text-lg font-medium text-gray-900 dark:text-white">
+                                My First Post
+                            </h3>
+                                                            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
+                                    A short description used in previews and SEO
+                                </p>
+                                                        <div class="text-xs text-gray-500 dark:text-gray-500 mt-2">
+                                                                    <time datetime="2026-03-28 06:15">Mar 28th, 2026</time>
+                                                                                                    <span class="mx-1">•</span>
+                                    <span>default</span>
+                                                            </div>
+                        </a>
+                                    </div>
+            </section>
+                    <section class="tag-section" data-tag="t_5YaF572u5pyN5Yqh5Zmo">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                    </svg>
+                    内置服务器
+                    <span class="ml-2 text-sm font-normal text-gray-500">(1 post)</span>
+                </h2>
 
-                    <div class="space-y-4">
-                                                    
-                            <a href="posts/使用内置PHP服务器方式开发项目时，在哪里创建项目目录.html"
-                               class="block bg-white dark:bg-gray-800 rounded-lg shadow p-4 hover:shadow-md transition-shadow">
-                                <h3 class="text-lg font-medium text-gray-900 dark:text-white">
-                                    使用内置PHP服务器方式开发项目时，在哪里创建项目目录
-                                </h3>
-                                                                    <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                                        本文介绍了在使用PHP内置服务器时，在哪里创建项目目录的方法
-                                    </p>
-                                                                <div class="text-xs text-gray-500 dark:text-gray-500 mt-2">
-                                                                            <time datetime="2026-03-28 15:22">Mar 28th, 2026</time>
-                                                                                                                <span class="mx-1">•</span>
-                                        <span>stuffren</span>
-                                                                    </div>
-                            </a>
-                                            </div>
-                </section>
-                    </div>
+                <div class="space-y-4">
+                                            
+                        <a href="posts/使用内置PHP服务器方式开发项目时，在哪里创建项目目录.html"
+                           class="post-item block bg-white dark:bg-gray-800 rounded-lg shadow p-4 hover:shadow-md transition-shadow"
+                           data-tags="[&quot;php&quot;,&quot;t_5YaF572u5pyN5Yqh5Zmo&quot;,&quot;nts&quot;]">
+                            <h3 class="text-lg font-medium text-gray-900 dark:text-white">
+                                使用内置PHP服务器方式开发项目时，在哪里创建项目目录
+                            </h3>
+                                                            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
+                                    本文介绍了在使用PHP内置服务器时，在哪里创建项目目录的方法
+                                </p>
+                                                        <div class="text-xs text-gray-500 dark:text-gray-500 mt-2">
+                                                                    <time datetime="2026-03-28 15:22">Mar 28th, 2026</time>
+                                                                                                    <span class="mx-1">•</span>
+                                    <span>stuffren</span>
+                                                            </div>
+                        </a>
+                                    </div>
+            </section>
+            </div>
+</main>
 
-    </main>
+
+<script>
+(function() {
+    // Get URL parameter
+    function getUrlParameter(name) {
+        const params = new URLSearchParams(window.location.search);
+        return params.get(name);
+    }
+
+    // Update URL without reload
+    function updateUrl(tag) {
+        const url = new URL(window.location);
+        if (tag) {
+            url.searchParams.set('tag', tag);
+        } else {
+            url.searchParams.delete('tag');
+        }
+        window.history.pushState({}, '', url);
+    }
+
+    // Filter posts by tag
+    function filterByTag(tagSlug) {
+        const sections = document.querySelectorAll('.tag-section');
+        const buttons = document.querySelectorAll('.tag-btn');
+        const allButton = document.querySelector('.tag-btn-all');
+
+        // Update button states
+        buttons.forEach(btn => {
+            if (btn.dataset.tag === tagSlug) {
+                btn.classList.remove('border-gray-300', 'dark:border-gray-600', 'bg-white', 'dark:bg-gray-800', 'text-gray-700', 'dark:text-gray-300', 'hover:border-blue-400', 'hover:bg-blue-50', 'dark:hover:bg-gray-700');
+                btn.classList.add('border-blue-600', 'bg-blue-600', 'text-white');
+                btn.querySelector('span:last-child').classList.remove('bg-gray-100', 'dark:bg-gray-700', 'text-gray-600', 'dark:text-gray-400');
+                btn.querySelector('span:last-child').classList.add('bg-blue-500', 'text-white');
+            } else {
+                btn.classList.remove('border-blue-600', 'bg-blue-600', 'text-white');
+                btn.classList.add('border-gray-300', 'dark:border-gray-600', 'bg-white', 'dark:bg-gray-800', 'text-gray-700', 'dark:text-gray-300', 'hover:border-blue-400', 'hover:bg-blue-50', 'dark:hover:bg-gray-700');
+                btn.querySelector('span:last-child').classList.remove('bg-blue-500', 'text-white');
+                btn.querySelector('span:last-child').classList.add('bg-gray-100', 'dark:bg-gray-700', 'text-gray-600', 'dark:text-gray-400');
+            }
+        });
+
+        // Show/hide sections based on selected tag
+        sections.forEach(section => {
+            if (!tagSlug) {
+                // Show all sections
+                section.style.display = 'block';
+            } else if (section.dataset.tag === tagSlug) {
+                // Show selected tag section
+                section.style.display = 'block';
+            } else {
+                // Hide other sections
+                section.style.display = 'none';
+            }
+        });
+    }
+
+    // Initialize
+    function init() {
+        const selectedTag = getUrlParameter('tag');
+
+        // Add click handlers to tag buttons
+        const buttons = document.querySelectorAll('.tag-btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const tagSlug = this.dataset.tag;
+                updateUrl(tagSlug);
+                filterByTag(tagSlug);
+            });
+        });
+
+        // Apply initial filter if URL has tag parameter
+        if (selectedTag) {
+            filterByTag(selectedTag);
+        }
+    }
+
+    // Run on page load
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+</script>
     </section>
 
     <footer aria-label="Page footer" class="flex py-4 px-6 w-full text-center mt-auto bg-slate-100 dark:bg-gray-800">
